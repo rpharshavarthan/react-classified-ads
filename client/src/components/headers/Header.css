@@ -28,6 +28,9 @@ header ul li {
   border-top: 3px solid transparent;
   letter-spacing: 1px;
 }
+header ul li:nth-last-child(2){
+  margin-right: 0px;
+}
 header ul li:hover {
   border-bottom: 3px solid white;
 }
@@ -93,6 +96,7 @@ header .menu svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 30px;
 }
 .chat-wish a:last-child{
   height: 25px;
