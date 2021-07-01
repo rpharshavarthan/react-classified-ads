@@ -194,10 +194,10 @@ export default function Sell() {
 
   return (
     <div className="sell_body">
+      <div>
+        <Toaster />
+      </div>
       <div className="sell_product">
-        <div>
-          <Toaster />
-        </div>
         <div>
           <div className="upload">
             <input

@@ -10,9 +10,9 @@ export default function BtnRender({ product, deleteProduct }) {
   const [openModal, setOpenModal] = useState(false);
   return (
     <div className="row_btn">
-      <div>
+      {/* <div>
         <Toaster position="bottom-center" reverseOrder={false} />
-      </div>
+      </div> */}
       {product.seller_id === user?._id ? (
         <>
           <Link id="btn_buy" to={`/edit_product/${product._id}`}>
