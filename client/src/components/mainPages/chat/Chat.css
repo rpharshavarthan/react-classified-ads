@@ -1,0 +1,114 @@
+.messenger{
+    display: flex;
+    height: calc(100vh - 85px);
+}
+.chatMenu{
+    flex: 2.5;
+    /* border: 1px solid black; */
+    background-color: rgb(190, 190, 190);
+    background-color: #333;
+    background-color: black;
+    padding: 0px;
+    margin: 10px;
+    margin-right: 0;
+}
+.chatBox{
+    flex: 5;
+    /* border: 1px solid black; */
+}
+.chatOnline{
+    flex: 3;
+    /* border: 1px solid black; */
+}
+.chatMenuWrapper, .chatBoxWrapper, .chatOnlineWrapper{
+    padding: 10px;
+    /* background-color: aqua; */
+    height: 100%;
+}
+.chatBoxWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chatBoxHeader{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    padding: 10px;
+    background-color: black;
+    margin-bottom: 5px;
+}
+.chatBoxHeader div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:orange;
+    font-family: "Caros";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.chatBoxTop{
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 5px;
+}
+.chatBoxBottom{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+.chatBoxBottom textarea{
+    width: 80%;
+    height: 45px;
+    padding: 10px;
+    color: black;
+    /* border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px; */
+}
+.chatBoxBottom button{
+    width: 20%;
+    height: 45px;
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    /* border-top-right-radius: 25px;
+     border-bottom-right-radius: 25px; */
+    /* border-radius: 15px; */
+}
+.noConversation{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.noConversation span{
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(199, 195, 195);
+    font-size: 21px;
+    letter-spacing: 1px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

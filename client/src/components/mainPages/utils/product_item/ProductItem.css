@@ -1,0 +1,122 @@
+.product_card {
+  max-width: 250px;
+  /* overflow: hidden; */
+  max-height: 500px;
+  /* box-shadow: 0 0 30px #ddd; */
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.37); */
+  margin: 20px 0;
+  position: relative;
+  box-shadow: -15px -15px 15px #403b4a15, 15px 15px 15px rgba(0, 0, 0, 0.125);
+}
+/* rgba(255,255,255, 0.2)  */
+
+.product_card::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 8%;
+  width: 90%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  transform-origin: left;
+  transform: skewY(5.5deg);
+  z-index: -1;
+  filter: blur(5px);
+}
+.product_card_head {
+  padding: 10px 10px 0 10px;
+}
+.product-img {
+  width: 100%;
+  height: 200px;
+  height: 150px;
+  display: block;
+  object-fit: cover;
+}
+.product_box h3 {
+  width: 100%;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-top: 7.5px;
+  /* color: #32323232; */
+}
+.product_card span {
+  color: crimson;
+  /* color: orange; */
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bold;
+}
+.seller {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  min-height: 30px;
+}
+.product_box p {
+  width: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  /* margin-bottom: 4px; */
+  /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    height: 61px; */
+  overflow: hidden;
+  color: darkslategray;
+}
+.row_btn {
+  width: 100%;
+  /* margin-top: 10px; */
+  display: flex;
+  /* justify-content: center; */
+}
+.row_btn a {
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 13px;
+  border-top: 1px solid grey;
+}
+#btn_buy {
+  border-right: 0.5px solid grey;
+}
+#btn_view {
+  border-left: 0.5px solid grey;
+}
+#btn_delete:hover {
+  color: crimson;
+}
+@media screen and (max-width: 284px) {
+  .product_card {
+    width: 200px;
+    /* height: 200px; */
+  }
+  .product_box h3 {
+    font-size: 16px;
+  }
+  .product-img {
+    height: 125px;
+  }
+  .product_card span{
+      font-size: 12px;
+  }
+  .product_box p{
+      font-size: 11px;
+  }
+  .row_btn a{
+      font-size: 13px;
+  }
+}

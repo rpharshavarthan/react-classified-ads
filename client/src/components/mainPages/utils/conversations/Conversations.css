@@ -1,0 +1,28 @@
+.conversation{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    /* margin-top: 10px; */
+    border-bottom: 1px solid gray;
+}
+.conversation:hover{
+    background-color: rgba(128, 128, 128, 0.25);
+}
+.conversation:focus{
+    background-color: chartreuse;
+}
+.dp{
+    width: 37.5px;
+    height: 37.5px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.name{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Caros";
+    font-weight: bold;
+    color: orange;
+}

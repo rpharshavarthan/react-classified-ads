@@ -1,0 +1,6 @@
+node_modules/
+.env
+images/
+tmp/
+copy.js
+webSockets.js

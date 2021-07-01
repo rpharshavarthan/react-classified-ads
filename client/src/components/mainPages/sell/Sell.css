@@ -1,0 +1,167 @@
+.sell_body{
+  /* margin: 10px 10px; */
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sell_product {
+  /* max-width: 728px; */
+  margin: 20px 10px;
+  min-width: 290px;
+  width: 728px;
+  border: 2px solid black;
+  background-color: black;
+}
+.upload {
+  max-width: 150px;
+  height: 150px;
+  width: 100%;
+  border: 2px solid orange;
+  padding: 15px;
+  margin: 37.5px;
+  margin-bottom: 0px;
+  position: relative;
+}
+#file_upload {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  outline: none;
+}
+#file_upload::before {
+  content: "+";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  color: orange;
+  font-size: 5rem;
+  text-align: center;
+  cursor: pointer;
+  margin: auto;
+}
+.file_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+} 
+.file_img img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.file_img span {
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  background-color: white;
+  padding: 5px 5px;
+  cursor: pointer;
+  font-weight: 900;
+  color: crimson;
+}
+.sell_product form {
+  min-width: 290px;
+  width: 100%;
+  padding: 37.5px;
+  padding-top: 20px;
+}
+.sell_product form .row {
+  width: 100%;
+  margin: 15px 0;
+}
+label{
+  text-transform: uppercase;
+  color: #403b4a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.sell_product form input,
+textarea {
+  font-family: monospace;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 100%;
+  padding-top: 2.5px ;
+  padding-bottom: 2.5px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-bottom: solid 2px #403b4a;
+  color: white;
+}
+/* #474544 */
+.sell_product form button{
+  width: 100%;
+  height: 50px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-top: 20px;
+  background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.sell_product form button:hover {
+  background: #474544;
+  color: #F2F3EB;
+}
+.sell_product h2{
+  font-size: 23px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: orange;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.seller_desc div{
+  margin-top: 10px;
+}
+.seller_desc div h4{
+  color: #474544;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+.seller_desc div span{
+  color: #e7e9bb;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 1.25px;
+}
+.underline {
+  border-bottom: solid 2px orange;
+  margin: 0.512em auto;
+  width: 80px;
+}
+
+@media screen and (max-width: 360px) {
+  .sell_product h2{
+  font-size: 21px;
+}
+}

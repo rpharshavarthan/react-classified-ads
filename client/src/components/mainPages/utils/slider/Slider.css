@@ -1,0 +1,52 @@
+.slider-body {
+  height: 300px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 300px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+.slider img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.slider-body .left,
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: black;
+  height: 80px;
+  /* height: 10vw; */
+  fill: orange;
+  cursor: pointer;
+  z-index: 10;
+}
+.left {
+  top: 110px;
+  left: 20px;
+  padding: 0 10px;
+}
+.right {
+  top: 110px;
+  right: 20px;
+  padding: 0 10px;
+}
+.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+.lastSlide {
+  transform: translateX(-100%);
+}
+.nextSlide {
+  transform: translateX(100%);
+}

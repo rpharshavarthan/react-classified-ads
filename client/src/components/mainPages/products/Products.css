@@ -1,0 +1,18 @@
+.products{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    justify-items: center;
+    margin: 20px auto;
+    margin-top: 10px;
+}
+/* minmax(300px, 1fr) */
+
+/* -------product item----- */
+@import url('../utils/product_item/ProductItem.css');
+
+/* ----------filter bar------- */
+@import url('../utils/filters/Filter.css');
+
+/* -------slider-------------- */
+@import url('../utils/slider/Slider.css');

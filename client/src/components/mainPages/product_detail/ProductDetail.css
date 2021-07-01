@@ -1,0 +1,218 @@
+/* .detail{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+}
+.detail img{
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+.box-detail{
+    padding: 20px;
+    max-width: 400px;
+    max-height: 450px;
+    width: 100%;
+    margin: 20px;
+     box-shadow: 0 0 20px #ddd;
+}
+.box-detail .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-detail h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 34px;
+}
+.box-detail p{
+    line-height: 1.5;
+    margin: 10px 0;
+    opacity: 0.8;
+}
+.box-detail .cart{
+    background-color: #333;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}  */
+.product {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail {
+  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  margin: 20px;
+  /* box-shadow: 0 0 20px #ddd; */
+  box-shadow: -15px -15px 15px #403b4a15, 15px 15px 15px rgba(0, 0, 0, 0.125);
+  padding: 15px;
+}
+.detail img {
+  max-width: 400px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  /* border-radius: 20px; */
+}
+.box-detail {
+  max-width: 500px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 5px;
+  width: 100%;
+}
+.product span {
+  position: relative;
+  font-size: 16px;
+  color: #e7e9bb;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+hr {
+  background-color: #403b4a;
+  height: 2px;
+  height: px;
+  outline: none;
+  border: none;
+}
+.box-detail h2 {
+  width: 100%;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 36px;
+  color: black;
+  /* border-bottom: 1.5px solid #3232; */
+}
+.desc {
+  border-top: 1.5px solid #403b4a;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.price {
+  color: crimson;
+  font-size: 17px;
+  margin-top: 10px;
+  letter-spacing: 2px;
+}
+.condition {
+  width: 100%;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+.condition img {
+  position: relative;
+  bottom: 2px;
+  display: inline;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+}
+.rating {
+  position: relative;
+  top: 9px;
+  right: 23px;
+  display: inline-block;
+  /* vertical-align: middle; */
+  width: 23px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+  color: white;
+  border-radius: 50%;
+  background: crimson;
+}
+.seller-detail {
+  /* width: 100%; */
+  /* display: block; */
+  border-top: 1.5px solid #403b4a;
+  padding-top: 10px;
+}
+.seller-detail p {
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  margin: 0px;
+}
+
+.box-detail .cart {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  padding: 12px 25px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.related-products h1 {
+  letter-spacing: 0.5px;
+  border-bottom: 1.5px solid #403b4a;
+  margin: 0 20px;
+}
+@media (max-width: 985px) {
+  .detail {
+    max-width: 500px;
+    flex-direction: column;
+    padding: 15px;
+  }
+  .detail img {
+    max-width: 475px;
+    height: 300px;
+  }
+  .box-detail {
+    min-height: 300px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+  }
+  .box-detail h2{
+      font-size: 26px;
+  }
+  .condition img {
+    position: relative;
+    bottom: 2px;
+    display: inline;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+  }
+  .box-detail .cart {
+    margin-top: 10px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+  .related-products h1{
+      font-size: 25px;
+  }
+}

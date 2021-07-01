@@ -1,0 +1,36 @@
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 10px;
+  background-color: black;
+  z-index: -1;
+}
+.footer-text, .footer-text a{
+  color: orange;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.footer-text a{
+    border-bottom: 1px solid orange;
+}
+.social-icon{
+    width: 100px;
+}
+.social-icon ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-icon svg{
+    fill: orange;
+    width: 20px;
+    height: 20px;
+    display: block;
+}

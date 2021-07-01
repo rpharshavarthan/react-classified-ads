@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy"), url("./fonts/gilroy-extrabold.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Consola";
+  src: local("Consola"), url("./fonts/consola.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Caros";
+  src: local("Caros"), url("./fonts/caros-extrabold.otf") format("opentype");
+  font-weight: bold;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin-bottom: 30px;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.App {
+  /* max-width: 1150px; */
+  min-height: 100vh;
+  margin: 0 auto;
+  /* padding: 0 20px; */
+  /* box-shadow: 0 0 35px #eee; */
+  /* background-color: rgb(211, 211, 211); */
+  background: #403b4a;
+  background: -webkit-linear-gradient(to top right, #e7e9bb, #403b4a);
+  background: linear-gradient(to top right, #e7e9bb, #403b4a);
+}
+a {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ----------header--------- */
+@import url("./components/headers/Header.css");
+
+/* --------footer-------- */
+@import url("./components/footer/Footer.css");
+
+/*-----------products------------*/
+@import url("./components/mainPages/products/Products.css");
+
+/*-----------product detail------------*/
+@import url("./components/mainPages/product_detail/ProductDetail.css");
+
+/*--------------login------------*/
+@import url("./components/mainPages/auth/Auth.css");
+
+/*--------------sell------------*/
+@import url("./components/mainPages/sell/Sell.css");

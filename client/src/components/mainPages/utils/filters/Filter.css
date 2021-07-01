@@ -1,0 +1,89 @@
+.filter_menu {
+  background-color: rgba(0, 0, 0, 1);
+  /* padding-top: 10px;
+    padding-bottom: 10px; */
+}
+.filter_menu .filter-row {
+  padding: 0 10px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.filter_menu .filter-row span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: white;
+  margin: 0 15px;
+  /* width: 75px; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  /* border: 0.25px solid white; */
+}
+.filter_menu .filter-row span:first-child{
+  margin-left: 0;
+}
+#all{
+  margin-left: 10px;
+}
+.filter_menu .filter-row span:hover {
+  border-bottom: 1px solid white;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+  padding-top: 0;
+}
+.search-box select,
+option {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  outline: none;
+}
+.search-box select {
+  min-width: 100px;
+  /* max-width: 150px; */
+  padding: 5px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+.search-box select option {
+  color: black;
+  padding-top: 10px;
+}
+.search-box input {
+  border: none;
+  flex: 1;
+  outline: none;
+  /* border-radius: 20px; */
+  /* margin-left: 10px; */
+  margin-right: 15px;
+  height: 40px;
+  padding: 0 15px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 446px) {
+  .search-box select{
+    display: none;
+  }
+  .search-box input{
+    margin-right: 0px;
+  }
+}

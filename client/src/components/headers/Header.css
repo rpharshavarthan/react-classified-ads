@@ -1,0 +1,162 @@
+header {
+  padding: 2px 10px;
+  min-height: 70px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid black;
+  background-color: black;
+}
+header .logo {
+  flex: 1;
+}
+header a {
+  text-transform: uppercase;
+  /* color: #555;
+    color: black; */
+  color: white;
+}
+header ul li {
+  display: inline-block;
+  margin: 0;
+  margin-right: 30px;
+  font-size: 17px; /*22*/
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  letter-spacing: 1px;
+}
+header ul li:hover {
+  border-bottom: 3px solid white;
+}
+.menu {
+  display: none;
+}
+header .menu svg {
+  fill: #ffa500;
+}
+.cart-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47.5px;
+  height: 47.5px;
+  color: #333333;
+  background-color: #dddddd;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+}
+.cart-icon a {
+  width: 35px;
+  height: 35px;
+}
+.cart-icon span {
+  position: absolute;
+  font-size: 12px;
+  top: -10px;
+  right: -1px;
+  width: 20px;
+  height: 20px;
+  color: black;
+  background-color: #ffa500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.logo {
+  position: relative;
+}
+.logo span {
+  /* font-family: "Consola"; */
+  position: absolute;
+  top: 19px;
+  letter-spacing: 2px;
+  font-size: 24px;
+  color: orange;
+  /* text-transform: lowercase; */
+}
+/* 45 t6 */
+.logo span b{
+  text-transform: lowercase;
+}
+/* 45  top6*/
+.menu-item {
+  font-family: "Gilroy";
+}
+.chat-wish{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chat-wish a:last-child{
+  height: 25px;
+  width: 25px;
+}
+.chat-icon {
+  fill: white;
+  margin-right: 25px;
+}
+.wish-icon{
+  fill: crimson;
+}
+.chat-icon{
+  
+}
+
+@media screen and (max-width: 800px) {
+  header ul {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    /* background: black; */
+    background: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0.98;
+    z-index: 99;
+    transition: 0.5s ease-in;
+  }
+  header ul li {
+    margin-right: 0px;
+  }
+  header .menu {
+    display: block;
+    cursor: pointer;
+  }
+  header ul .menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  header .menu svg {
+    width: 20px;
+    height: 20px;
+  }
+  header .logo img {
+    margin-left: 15px;
+    width: 200px;
+  }
+  .logo span {
+    position: absolute;
+    top: 2px;
+    letter-spacing: 2px;
+    font-size: 30px;
+  }
+  .cart-icon{
+    display: none;
+  }
+  .chat-icon{
+    width: 30px;
+    height: 30px;
+  }
+}
