@@ -72,8 +72,6 @@ app.use("/api", require("./routes/category.route"));
 app.use("/api", require("./routes/upload.route"));
 app.use("/api", require("./routes/product.route"));
 app.use("/api", require("./routes/ad.route"));
-app.use("/api", require("./routes/conversation"));
-app.use("/api", require("./routes/message"));
 
 //
 app.get("*", (req, res) => {
