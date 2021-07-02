@@ -6,4 +6,4 @@ homepage-
 
 product preview page-
 
-![product preview](./assets/assets/Product-Preview.png)
+![product preview](./assets/Product-Preview.png)
