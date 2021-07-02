@@ -3,9 +3,10 @@ import path from "path";
 import axios from "axios";
 import { GlobalState } from "../../../globalState";
 import Loading from "../utils/loading/Loading";
-import Cross from "../../../icons/cross.svg"
+import Cross from "../../../icons/cross.svg";
 import toast, { Toaster } from "react-hot-toast";
 import { useParams, useHistory } from "react-router-dom";
+import { ToastProvider, useToasts } from "react-toast-notifications";
 
 const initialState = {
   product_id: "",
@@ -16,7 +17,7 @@ const initialState = {
   condition: 0,
 };
 
-export default function Sell() {
+function SellApp() {
   const state = useContext(GlobalState);
   const [user] = state.userAPI.user;
   const [product, setProduct] = useState(initialState);
@@ -24,59 +25,79 @@ export default function Sell() {
   const [loading, setLoading] = useState(false);
   const [token] = state.token;
   const [products] = state.productsAPI.products;
-  const [edit, setEdit] = useState(false)
+  const [edit, setEdit] = useState(false);
   const [callback, setCallback] = state.productsAPI.callback;
   const [adCallback, setAdCallback] = state.adAPI.adCallback;
   const param = useParams();
   const history = useHistory();
+  const { addToast } = useToasts();
+
+  //
+  const toastify = (message, type) => {
+     if (type == "success"){
+       addToast(message, {
+         appearance: "success",
+         autoDismiss: true,
+       });
+     }else if (type == "error"){
+       addToast(message, {
+         appearance: "error",
+         autoDismiss: true,
+       });
+     }
+  };
 
   useEffect(() => {
-    if(param.id){
-      setEdit(true)
+    if (param.id) {
+      setEdit(true);
       products.forEach((product) => {
-        if(product._id === param.id){
+        if (product._id === param.id) {
           setProduct(product);
-          setImage(product.image)
-        } 
-      })
-    }else{
+          setImage(product.image);
+        }
+      });
+    } else {
       setEdit(false);
-      setProduct(initialState)
-      setImage(false)
+      setProduct(initialState);
+      setImage(false);
     }
-  },[param.id, products])
+  }, [param.id, products]);
 
+  //upload handler
   const handleUpload = async (e) => {
+    console.log("upload function");
     e.preventDefault();
     try {
       const file = e.target.files[0];
       let supportedType = [".jpg", ".png", ".jpeg"];
       let fileType = path.extname(file.name);
 
-      if (!file) return toast.error("file not found",{
-        style: {
-          borderRadius: "0px",
-          background: "#333",
-          color: "#fff",
-        },
-      });
+      if (!file)
+        return toast.error("file not found", {
+          style: {
+            borderRadius: "0px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
 
-      if (file.size > 1024 * 1024) return toast.error("file size is big",{
-        style: {
-          borderRadius: "0px",
-          background: "#333",
-          color: "#fff",
-        },
-      });
+      if (file.size > 1024 * 1024)
+        return toast.error("file size is big", {
+          style: {
+            borderRadius: "0px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
 
       if (!supportedType.includes(fileType))
-        return toast.error("file format not supported",{
-        style: {
-          borderRadius: "0px",
-          background: "#333",
-          color: "#fff",
-        },
-      });
+        return toast.error("file format not supported", {
+          style: {
+            borderRadius: "0px",
+            background: "#333",
+            color: "#fff",
+          },
+        });
 
       let formData = new FormData();
       formData.append("file", file);
@@ -89,38 +110,49 @@ export default function Sell() {
       });
       setLoading(false);
       setImage(res.data);
+      console.log("image uploaded");
     } catch (error) {
       alert(error.response.data.message);
     }
   };
 
-  const handleDelete = async () =>{
+  //image delete handler
+  const handleDelete = async () => {
     try {
-      setLoading(true)
-      const res = await axios.post('/api/delete', {public_id: image.public_id}, {
-        headers: {
-          Authorization: token
+      setLoading(true);
+      const res = await axios.post(
+        "/api/delete",
+        { public_id: image.public_id },
+        {
+          headers: {
+            Authorization: token,
+          },
         }
-      })
+      );
       console.log(res.data.message);
       setLoading(false);
-      setImage(false)
+      setImage(false);
     } catch (error) {
       alert(error.response.data.message);
     }
-  }
+  };
 
+  //onchange handler
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setProduct({...product, [name]: value})
-  }
+    setProduct({ ...product, [name]: value });
+  };
 
+  //submit handler
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    let message = null;
+    e.preventDefault();
     try {
-      if(!image) return alert('please attach image');
-      if(edit){
+      if (!image)
+        return toastify("please attach image", "error");
+      // return toastNotification("please attach image", "error");
+      if (edit) {
         const res = await axios.put(
           `/api/products/${product._id}`,
           {
@@ -133,14 +165,8 @@ export default function Sell() {
             },
           }
         );
-        toast.success(res.data.message, {
-          style: {
-            borderRadius: "0px",
-            background: "#333",
-            color: "#fff",
-          },
-        });
-      }else{
+        message = res.data.message;
+      } else {
         const res = await axios.post(
           "/api/products",
           {
@@ -169,24 +195,22 @@ export default function Sell() {
             },
           }
         );
-        toast.success(res.data.message, {
-          style: {
-            borderRadius: "0px",
-            background: "#333",
-            color: "#fff",
-          },
-        });
         console.log(addCategory.data.message);
+        message = res.data.message;
       }
-      setImage(false)
-      setProduct(initialState)
-      setCallback(!callback)
-      setAdCallback(!adCallback)
-      history.push('/')
+      setImage(false);
+      setProduct(initialState);
+      setCallback(!callback);
+      setAdCallback(!adCallback);
+      toastify(message, "success");
+      if(edit){
+        history.push("/sell");
+      }
+      // history.push("/");
     } catch (error) {
-      console.log(error.response.data.message);
+      alert(error.response.data.message);
     }
-  }
+  };
 
   const styleUpload = {
     display: image ? "block" : "none",
@@ -194,9 +218,6 @@ export default function Sell() {
 
   return (
     <div className="sell_body">
-      <div>
-        <Toaster />
-      </div>
       <div className="sell_product">
         <div>
           <div className="upload">
@@ -214,7 +235,7 @@ export default function Sell() {
               <div className="file_img" style={styleUpload}>
                 <img src={image ? image.url : ""} alt="" />
                 <span onClick={handleDelete}>
-                  <img src={Cross} alt="" width="20" />
+                  <img src={Cross} alt="" />
                 </span>
               </div>
             )}
@@ -304,10 +325,20 @@ export default function Sell() {
                 <span>{user.phone}</span>
               </div>
             </div>
-            <button type="submit">{edit ? "Update" : "Post Now"}</button>
+            <button type="submit">
+              <span>{edit ? "Update" : "Post Now"}</span>
+            </button>
           </form>
         </div>
       </div>
     </div>
+  );
+}
+
+export default function Sell() {
+  return (
+    <ToastProvider >
+      <SellApp />
+    </ToastProvider>
   );
 }
