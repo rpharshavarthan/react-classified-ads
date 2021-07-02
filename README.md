@@ -12,7 +12,7 @@ peace da is a mern stack classified ads web application for college students to 
      <img width="58" src="https://img.icons8.com/doodle/96/000000/tea--v1.png"/>
      <img width="52" src="https://img.icons8.com/doodle/480/000000/spotify.png"/>
   </div>
-  plus 28+ cups of coffee, 168+ hours of code, 76+ hours of spotify etc.
+  plus, 28+ cups of coffee, 168+ hours of code, 76+ hours of spotify etc.
 </div>
 
 ## screenshots
@@ -23,6 +23,14 @@ homepage-
 product preview page-
 
 ![product preview](./assets/Product-Preview.png)
+
+post ads-
+
+![post ads](./assets/Post-Ad.png)
+
+chat with seller-
+
+![chat with seller](./assets/Chat.png)
 
 ## features(version 1)
 
