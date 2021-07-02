@@ -6,14 +6,25 @@ const userCtrl = {
   register: async (req, res) => {
     try {
       const { name, email, password, study_year, course, location, phone } = req.body;
-      const user = await Users.findOne({ email });
-      if (user) {
-        return res.status(400).json({ message: "email already exists" });
+      if (
+        !name ||
+        !study_year ||
+        !course ||
+        !email ||
+        !password ||
+        !location ||
+        !phone
+      ) {
+        return res.status(400).json({ message: "fill all the field" });
       }
       if (password.length < 6) {
         return res
           .status(400)
           .json({ message: "passsword should be atleast 6 character long" });
+      }
+      const user = await Users.findOne({ email });
+      if (user) {
+        return res.status(400).json({ message: "email already exists" });
       }
       // password hashing
       const newUser = new Users({
