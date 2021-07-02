@@ -163,9 +163,11 @@ hr {
 }
 
 .box-detail .chat-seller {
-  background-color: orange;
+  background-color: #403b4a;
   font-size: 16px;
-  color: black;
+  font-family: monospace;
+  font-weight: bold;
+  color: white;
   text-align: center;
   margin-top: 10px;
   padding: 10px 25px;
