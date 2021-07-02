@@ -1,4 +1,4 @@
-# react-classified-ads( work under progress )
+# react-classified-ads
 peace da is a mern stack classified ads web application for college students to sell and buy used products within college campus.
 ## built with
 
