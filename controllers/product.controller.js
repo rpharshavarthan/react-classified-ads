@@ -96,9 +96,20 @@ const productCtrl = {
       if (!image) {
         return res.status(400).json({ message: "no image uploaded" });
       }
+      if(
+        !seller_id ||
+        !product_id ||
+        !title ||
+        !price ||
+        !description ||
+        !category ||
+        !condition
+      ){
+        return res.status(400).json({ message: "please fill all the fields" });
+      }
       const product = await Products.findOne({ product_id });
       if (product) {
-        return res.status(400).json({ message: "product already exists" });
+        return res.status(400).json({ message: "product with this id already exists" });
       }
       const newProduct = new Products({
         seller_id,
