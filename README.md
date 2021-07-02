@@ -47,19 +47,20 @@ chat with seller-
 --/ in-buit chat system to chat with the seller
 </div>
 <div>
---/ many more
+--/ and many more
 </div>
 
 ## work under progress
+> this app is under construction and being updated regularly. currently working on features like -
 
 <div>
 --/ wishlist
 </div>
 <div>
---/ additionl chat features(read recipients for chat)
+--/ read recipients for chat
 </div>
 <div>
---/ better UI/UX
+--/ improving UI/UX
 </div>
 
 
