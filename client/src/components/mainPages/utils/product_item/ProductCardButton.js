@@ -4,14 +4,14 @@ import { GlobalState } from "../../../../globalState";
 import toast, { Toaster } from "react-hot-toast";
 import Modal from "../modal/Modal";
 
-export default function BtnRender({ product, deleteProduct }) {
+export default function ProductCardButton({ product, deleteProduct }) {
   const state = useContext(GlobalState);
   const [user] = state.userAPI.user;
   const [openModal, setOpenModal] = useState(false);
   return (
     <div className="row_btn">
       {/* <div>
-        <Toaster position="bottom-center" reverseOrder={false} />
+        <Toaster/>
       </div> */}
       {product.seller_id === user?._id ? (
         <>

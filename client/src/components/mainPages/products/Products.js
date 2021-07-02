@@ -5,7 +5,7 @@ import { Container } from "../utils/loading/Loading";
 import Filter from "../utils/filters/Filter";
 import ImageSlider from "../utils/slider/Slider";
 import { SliderData } from "../utils/slider/SliderData";
-import Load from "../utils/Load/Load";
+import Load from "../utils/load_more/Load";
 import Modal from "../utils/modal/Modal";
 import { useState } from "react";
 

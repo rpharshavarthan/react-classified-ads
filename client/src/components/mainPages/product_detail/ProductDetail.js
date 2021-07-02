@@ -32,35 +32,35 @@ export default function ProductDetail() {
             </div>
             <p className="price">&#x20b9;{productDetail.price}</p>
             <div className="condition">
-              <span>condition: </span>
+              <span>condition- </span>
               <img src={Star} alt="" />
               <div className="rating">{productDetail.condition}</div>
               {/* {productDetail.condition == "good" ? } */}
             </div>
             <div className="desc">
-              <span>description: </span>
+              <span>description- </span>
               <p>{productDetail.description}</p>
             </div>
             <div className="seller-detail">
               <p>
-                <span>seller:</span> {productDetail.seller_name},{" "}
+                <span>seller-</span> {productDetail.seller_name},{" "}
                 {productDetail.study_year}-{productDetail.course}
               </p>
               <p>
-                <span>location:</span> {productDetail.location}
+                <span>location-</span> {productDetail.location}
               </p>
               <p>
-                <span>contact:</span> {productDetail.phone}
+                <span>contact-</span> {productDetail.phone}
               </p>
             </div>
-            <Link to={`/chat/${productDetail.seller_id}`} className="cart">
+            <Link to={`/chat/${productDetail.seller_id}`} className="chat-seller">
               Chat with Seller
             </Link>
           </div>
         </div>
       </div>
       <div className="related-products">
-        <h1>SIMILAR PRODUCTS</h1>
+        <h2>SIMILAR PRODUCTS</h2>
         <div className="products">
           {products.map((product) => {
             return product.category === productDetail.category ? (

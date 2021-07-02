@@ -1,0 +1,15 @@
+.load-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.load-more button{
+    text-transform: uppercase;
+    font-family: "Consola";
+    font-weight: bold;
+    letter-spacing: 0.25px;
+    border: 2px solid black;
+    background-color: orange;
+    padding: 5px 20px;
+    margin: 10px;
+}

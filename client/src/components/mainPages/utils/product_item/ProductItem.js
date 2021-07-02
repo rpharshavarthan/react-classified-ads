@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useContext } from "react";
 import Location from "../../../../icons/location.svg";
-import BtnRender from "./BtnRender";
+import ProductCardButton from "./ProductCardButton";
 import toast, { Toaster } from "react-hot-toast";
 import { GlobalState } from "../../../../globalState";
 
@@ -49,7 +49,7 @@ export default function ProductItem({
   return (
     <div className="product_card">
       <div>
-        <Toaster/>
+        <Toaster />
       </div>
       <div className="product_card_head">
         <img src={product.image.url} alt="" className="product-img" />
@@ -73,7 +73,7 @@ export default function ProductItem({
           </div>
         </div>
       </div>
-      <BtnRender product={product} deleteProduct={deleteProduct} />
+      <ProductCardButton product={product} deleteProduct={deleteProduct} />
     </div>
   );
 }

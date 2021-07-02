@@ -121,7 +121,7 @@ header .menu svg {
     width: 100%;
     height: 100vh;
     /* background: black; */
-    background: orange;
+    background: #ffa500;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -148,7 +148,7 @@ header .menu svg {
   }
   header .logo img {
     margin-left: 15px;
-    width: 200px;
+    width: 150px;
   }
   .logo span {
     position: absolute;

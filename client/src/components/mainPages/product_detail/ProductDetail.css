@@ -88,7 +88,7 @@
   font-size: 16px;
   color: #e7e9bb;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.25px;
 }
 hr {
   background-color: #403b4a;
@@ -103,8 +103,8 @@ hr {
   text-overflow: ellipsis;
   /* white-space: nowrap; */
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 36px;
+  letter-spacing: 1px;
+  font-size: 31px;
   color: black;
   /* border-bottom: 1.5px solid #3232; */
 }
@@ -156,22 +156,25 @@ hr {
   padding-top: 10px;
 }
 .seller-detail p {
+  font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1.25px;
   margin: 0px;
 }
 
-.box-detail .cart {
-  background-color: #333;
-  color: white;
+.box-detail .chat-seller {
+  background-color: orange;
+  font-size: 16px;
+  color: black;
   text-align: center;
   margin-top: 10px;
-  padding: 12px 25px;
+  padding: 10px 25px;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: 2.25px solid black;
 }
-.related-products h1 {
+.related-products h2 {
   letter-spacing: 0.5px;
   border-bottom: 1.5px solid #403b4a;
   margin: 0 20px;
