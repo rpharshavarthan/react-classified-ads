@@ -18,7 +18,7 @@ export default function ProductAPI() {
       setLoading(true)
       axios.get(
         `/api/products?limit=${
-          page * 9
+          page * 8
         }&${category}&${sort}&title[regex]=${search}`
       ).then((res) => {
         setLoading(false);
